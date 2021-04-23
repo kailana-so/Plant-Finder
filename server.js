@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const port = 8080
 const axios = require('axios')
-// const cors = require('cors')
+// env config
 require('dotenv').config()
 
 app.listen(port, () => {
@@ -14,14 +14,6 @@ app.use(express.json({limit: "5000kb"}))
 app.use(express.static('public'))
 // app.set('view engine', 'ejs')
 // app.set('views', './views') 
-
-// // cors config
-// app.use(cors())
-
-// var corsOptions = {
-//     origin: 'http://localhost:3000',
-//     optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
-//   }
 
 
 app.get('/test', (req, res) => {
@@ -44,8 +36,8 @@ app.post('/api/image-search', (req, res) => {
 
 // request function - settings of the request your making
 function getOptionsAxiosRequest(base64files) {
-    // const files = ['photo1.jpg']; 
-    // recieved fromt the promise instance of base64
+
+    // recieved from the promise instance of base64
     const data = {
         api_key: process.env.PLANT_API_KEY,
         images: base64files,
