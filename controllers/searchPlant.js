@@ -15,7 +15,7 @@ router.get('/api/plants', (req, res) => {
     // res.json({ message: req.query.input })
 
 
-    knex.raw('SELECT * FROM plants where plant_name = ?;', [req.query.input]).then(dbRes => {
+    knex.raw('SELECT * FROM plants;').then(dbRes => {
         res.json(dbRes.rows[0])
         console.log(dbRes.rows[0])
     }).catch(err => {
