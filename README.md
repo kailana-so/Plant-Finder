@@ -37,6 +37,8 @@ The Google Maps component functions like an index of all listing added to the da
 - Google Maps API
 - Postgres
 - Knex (promises)
+- axios
+- geolocation API
 
 
 ## Futher builds
