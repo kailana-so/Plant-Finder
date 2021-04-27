@@ -1,13 +1,7 @@
 const express = require('express')
-const axios = require('axios')
-const router = express.Router()
 
-const knex = require('knex')({
-    client: 'pg',
-    connection: {
-    database: 'plant_finder_db'
-    }
-})
+const router = express.Router()
+const knex = require('../libs/db.js')
 
 router.post('/api/plants', (req, res) => { 
     console.log('routes matched /api/plants')

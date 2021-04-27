@@ -1,12 +1,6 @@
 const express = require('express')
 const router = express.Router()
-
-const knex = require('knex')({
-    client: 'pg',
-    connection: {
-    database: 'plant_finder_db'
-    }
-})
+const knex = require('../libs/db.js')
 
 router.get('/plants', (req, res) => { 
 
