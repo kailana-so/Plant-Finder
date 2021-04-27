@@ -11,6 +11,7 @@ router.get('/plants', (req, res) => {
         res.json({ message: err.message })
     })
     
+    
 
 })
 module.exports = router
