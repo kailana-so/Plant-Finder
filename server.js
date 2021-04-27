@@ -6,13 +6,6 @@ const port = 8080
 // env config
 require('dotenv').config()
 
-// password digesting config stuff
-// const bodyParser = require('body-parser')
-// const bcrypt = require('bcrypt')
-// const session = require('express-session')
-// const methodOverride = require('method-override')
-
-
 // controllers
 const indexRoutes = require('./controllers/indexController.js')
 const imageSearchRoutes = require('./controllers/imageSearch.js')
