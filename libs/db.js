@@ -1,6 +1,7 @@
 if (process.env.NODE_ENV) {
   var knex = require('knex')({
-    connectionString: process.env.DATABASE_URL,
+        client: 'pg',
+        connectionString: process.env.DATABASE_URL,
     })
 } else {
     var knex = require('knex')({
